@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Store Intelligence Live</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <h1>Store Intelligence</h1>
+          <p id="status">Connecting...</p>
+        </div>
+        <button id="refresh" type="button">Refresh</button>
+      </section>
+
+      <section class="kpis">
+        <article><span>Visitors</span><strong id="visitors">0</strong></article>
+        <article><span>Conversion</span><strong id="conversion">0%</strong></article>
+        <article><span>Queue</span><strong id="queue">0</strong></article>
+        <article><span>Abandonment</span><strong id="abandonment">0%</strong></article>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <h2>Zone Heatmap</h2>
+          <div id="heatmap" class="heatmap"></div>
+        </div>
+        <div class="panel">
+          <h2>Funnel</h2>
+          <div id="funnel" class="funnel"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Anomalies</h2>
+          <div id="anomalies" class="anomalies"></div>
+        </div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+*.db
+*.db-shm
+*.db-wal
+data/generated_events.jsonl
+venv/
+.venv/

@@ -1,0 +1,38 @@
+{
+  "stores": [
+    {
+      "store_id": "STORE_BLR_002",
+      "store_name": "Brigade_Bangalore",
+      "city": "Bangalore",
+      "open_hours": {
+        "start": "10:00",
+        "end": "22:00",
+        "timezone": "Asia/Kolkata"
+      },
+      "cameras": [
+        {
+          "camera_id": "CAM_ENTRY_01",
+          "role": "ENTRY",
+          "coverage": ["ENTRY"]
+        },
+        {
+          "camera_id": "CAM_FLOOR_01",
+          "role": "FLOOR",
+          "coverage": ["SKINCARE", "MAKEUP", "BATH_BODY"]
+        },
+        {
+          "camera_id": "CAM_BILLING_01",
+          "role": "BILLING",
+          "coverage": ["BILLING"]
+        }
+      ],
+      "zones": [
+        {"zone_id": "ENTRY", "name": "Entry Threshold", "x": 5, "y": 45, "w": 12, "h": 18},
+        {"zone_id": "SKINCARE", "name": "Skin Care", "x": 22, "y": 16, "w": 28, "h": 28},
+        {"zone_id": "MAKEUP", "name": "Makeup", "x": 54, "y": 18, "w": 28, "h": 26},
+        {"zone_id": "BATH_BODY", "name": "Bath and Body", "x": 24, "y": 52, "w": 24, "h": 26},
+        {"zone_id": "BILLING", "name": "Billing Counter", "x": 64, "y": 56, "w": 24, "h": 20}
+      ]
+    }
+  ]
+}

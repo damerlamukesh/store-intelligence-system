@@ -11,6 +11,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import ValidationError
+from scripts.ingest_events import ingest_events
 
 from .analytics import compute_anomalies, compute_funnel, compute_heatmap, compute_metrics, health
 from .layout import load_layout
@@ -117,3 +118,16 @@ def health_endpoint() -> dict:
     if not result["stores"]:
         result["stores"] = {}
     return result
+
+
+@app.on_event("startup")
+async def startup_event():
+    try:
+        import subprocess
+
+        subprocess.run(
+            ["python", "scripts/ingest_events.py"],
+            check=False
+        )
+    except Exception as e:
+        print(f"Startup ingest failed: {e}")

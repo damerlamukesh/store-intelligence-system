@@ -5,6 +5,7 @@ End-to-end submission for the Purplle / Apex Retail Store Intelligence challenge
 ## Run in 5 commands
 
 ```bash
+git clone https://github.com/damerlamukesh/store-intelligence-system.git
 cd store-intelligence-system
 docker compose up --build
 python scripts/generate_events.py --video-source "C:\Users\VARUN\Downloads\CCTV Footage-20260529T160731Z-3-00144614ea.zip"
